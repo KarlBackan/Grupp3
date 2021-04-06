@@ -8,11 +8,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_up.*
-import com.example.handspritsarmbandapp.LoginActivity as LoginActivity1
 
 
 class SignUpActivity : AppCompatActivity() {
-
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,17 +18,13 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         auth = FirebaseAuth.getInstance()
 
-        btn_back_to_login.setOnClickListener {
-            startActivity(Intent(this, LoginActivity1::class.java))
-            finish()
-        }
         btn_sign_up.setOnClickListener {
             signUpUser()
         }
 
     }
 
-    fun signUpUser() {
+    private fun signUpUser() {
         if (tv_username.text.toString().isEmpty()) {
             tv_username.error = "Please enter email"
             tv_username.requestFocus()
@@ -52,19 +46,11 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(tv_username.text.toString(), tv_password.text.toString())
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val user = auth.currentUser
-                    user?.sendEmailVerification()
-                        ?.addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                startActivity(Intent(this, LoginActivity1::class.java))
-                                finish()
-                            }
-                        }
+                    startActivity(Intent(this,LoginActivity::class.java))
+                    finish()
                 } else {
-                    Toast.makeText(
-                        baseContext, "Sign Up failed. Try again after some time.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(baseContext, "Sign Up failed. Try again after some time.",
+                        Toast.LENGTH_SHORT).show()
                 }
             }
     }
