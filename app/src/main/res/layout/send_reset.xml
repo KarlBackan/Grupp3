@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="SaniPro"
             android:textColor="#7C4F4F"
@@ -27,74 +27,44 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
-            android:text="Change password
+            android:text="Send password reset
 "
             android:textColor="#7C4F4F"
             android:textSize="35dp" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/edit_text_background"
-            android:drawableLeft="@drawable/ic_password"
+            android:drawableLeft="@drawable/ic_user"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Old password"
+            android:hint="Username"
             android:inputType="textPersonName"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="@color/hint_color"
             android:textSize="21sp" />
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/edit_text_background"
-            android:drawableLeft="@drawable/ic_password"
-            android:drawablePadding="10dp"
-            android:ems="10"
-            android:hint="New password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="21sp" />
-        <EditText
-            android:id="@+id/pasasdssword"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/edit_text_background"
-            android:drawableLeft="@drawable/ic_password"
-            android:drawablePadding="10dp"
-            android:ems="10"
-            android:hint="Repeat new password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="21sp" />
-
         <Button
-            android:id="@+id/login"
+            android:id="@+id/btn_send_reset"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/button_background"
             android:gravity="center"
             android:onClick="signup"
-            android:text="Sign up"
+            android:text="Send reset"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="21sp" />
 
         <Button
+            android:id="@+id/btn_back_to_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -103,6 +73,12 @@
             android:text="Back to login"
             android:textColor="#7C4F4F"
             android:textSize="21sp" />
+
+
+
+
+
+
     </LinearLayout>
 
 </RelativeLayout>
