@@ -18,8 +18,9 @@ class SendResetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.send_reset)
-
         auth = FirebaseAuth.getInstance()
+
+        //button functions that either opens a new tab or runs the change password process
         btn_back_to_login.setOnClickListener {
             startActivity(Intent(this, LoginActivity1::class.java))
             finish()
@@ -29,6 +30,8 @@ class SendResetActivity : AppCompatActivity() {
             changePassword()
         }
     }
+
+    //function that check the textbox against emails on the firebase database and sends an email for a password reset to the mail that corresponds to the user
     private fun changePassword(){
         if (tv_username.text.toString().isEmpty()) {
             tv_username.error = "Please enter email"

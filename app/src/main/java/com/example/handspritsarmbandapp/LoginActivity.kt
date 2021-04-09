@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
 
+        //button functions calls either for changing tabs or to run the login process
         btn_forgot_password.setOnClickListener {
             startActivity(Intent(this, SendResetActivity1::class.java))
             finish()
@@ -40,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    //function which checks the text boxes against the firebase database accounts
     private fun doLogin() {
         if (tv_username.text.toString().isEmpty()) {
             tv_username.error = "Please enter email"
