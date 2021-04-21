@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.activity_sign_up.btn_sign_up
 import kotlinx.android.synthetic.main.activity_sign_up.tv_password
 import kotlinx.android.synthetic.main.activity_sign_up.tv_username
+import com.example.handspritsarmbandapp.SendResetActivity as SendResetActivity1
 import com.example.handspritsarmbandapp.SignUpActivity as SignUpActivity1
 
 
@@ -25,6 +26,11 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         auth = FirebaseAuth.getInstance()
 
+        //button functions calls either for changing tabs or to run the login process
+        btn_forgot_password.setOnClickListener {
+            startActivity(Intent(this, SendResetActivity1::class.java))
+            finish()
+        }
         btn_sign_up.setOnClickListener {
             startActivity(Intent(this, SignUpActivity1::class.java))
             finish()
@@ -33,10 +39,9 @@ class LoginActivity : AppCompatActivity() {
         btn_log_in.setOnClickListener {
             doLogin()
         }
-
-
     }
 
+    //function which checks the text boxes against the firebase database accounts
     private fun doLogin() {
         if (tv_username.text.toString().isEmpty()) {
             tv_username.error = "Please enter email"

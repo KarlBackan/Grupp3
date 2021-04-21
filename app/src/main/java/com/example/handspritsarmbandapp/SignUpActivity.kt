@@ -20,6 +20,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
         auth = FirebaseAuth.getInstance()
 
+        //button functions that either start a new tab or runs the signup process
         btn_back_to_login.setOnClickListener {
             startActivity(Intent(this, LoginActivity1::class.java))
             finish()
@@ -29,7 +30,7 @@ class SignUpActivity : AppCompatActivity() {
         }
 
     }
-
+    //function that checks the text boxes against conditionals and if they are fulfilled creates a new account on the firebase database
     fun signUpUser() {
         if (tv_username.text.toString().isEmpty()) {
             tv_username.error = "Please enter email"

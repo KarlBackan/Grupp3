@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HandspritsarmbandApp">
-        <activity android:name=".DashboardActivity">
-        </activity>
         <activity android:name=".SignUpActivity">
+        </activity>
+        <activity android:name=".SendResetActivity">
+        </activity>
+        <activity android:name=".DashboardActivity">
         </activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
