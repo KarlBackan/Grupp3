@@ -13,8 +13,13 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.activity_sign_up.btn_sign_up
 import kotlinx.android.synthetic.main.activity_sign_up.tv_password
 import kotlinx.android.synthetic.main.activity_sign_up.tv_username
+import kotlinx.android.synthetic.main.nickname_activity.*
 import com.example.handspritsarmbandapp.SendResetActivity as SendResetActivity1
 import com.example.handspritsarmbandapp.SignUpActivity as SignUpActivity1
+import com.example.handspritsarmbandapp.NicknameActivity as NicknameActivity1
+
+
+
 
 
 class LoginActivity : AppCompatActivity() {
@@ -65,6 +70,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
+
                     updateUI(user)
                 } else {
                     Toast.makeText(
@@ -84,9 +90,15 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?) {
 
-        if (currentUser != null) {
-            if(currentUser.isEmailVerified) {
-                startActivity(Intent(this, DashboardActivity::class.java))
+        if (currentUser != null) { //user is signed in
+            if(currentUser.isEmailVerified) { //email is verified
+                if(currentUser.isAnonymous){
+                    startActivity(Intent(this, DashboardActivity::class.java))
+                }
+                else{
+                    startActivity(Intent(this, NicknameActivity1::class.java))
+                }
+
                 finish()
             }
         } else {

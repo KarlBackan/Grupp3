@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_sign_up.tv_username
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import com.example.handspritsarmbandapp.LoginActivity as LoginActivity1
 
