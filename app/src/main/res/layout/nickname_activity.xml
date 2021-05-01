@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
@@ -8,8 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -17,20 +17,21 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
             android:gravity="center"
-            android:text="SaniPro"
+            android:text="Welcome"
             android:textColor="#7C4F4F"
-            android:textSize="100sp" />
+            android:textSize="80sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="Signup"
+            android:text="Username "
             android:textColor="#7C4F4F"
             android:textSize="35dp" />
 
         <EditText
-            android:id="@+id/tv_username"
+            android:id="@+id/tv_display_name"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"
@@ -38,52 +39,39 @@
             android:drawableLeft="@drawable/ic_user"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Email"
+            android:hint="Ex: Larry"
             android:inputType="textPersonName"
             android:padding="10dp"
             android:textColor="@color/black"
             android:textColorHint="@color/hint_color"
             android:textSize="21sp" />
 
-        <EditText
-            android:id="@+id/tv_password"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/edit_text_background"
-            android:drawableLeft="@drawable/ic_password"
-            android:drawablePadding="10dp"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="21sp" />
-
         <Button
             android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginBottom="30dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="end"
+            android:text="Sign up"
+            android:textColor="#7C4F4F"
+            android:textSize="15dp" />
+
+
+        <Button
+            android:id="@+id/btn_set_display_name"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_background"
-            android:text="Sign up"
             android:gravity="center"
+            android:onClick="Submit"
+            android:text="Submit"
             android:textAllCaps="false"
-            android:onClick = "signup"
             android:textColor="@color/white"
             android:textSize="21sp" />
 
-        <Button
-            android:id="@+id/btn_back_to_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:text="back to login"
-            android:background="?android:attr/selectableItemBackground"
-            android:textColor="#7C4F4F"
-            android:textSize="21sp" />
+
     </LinearLayout>
 
 </RelativeLayout>

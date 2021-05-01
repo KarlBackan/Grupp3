@@ -6,10 +6,11 @@ import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.send_reset.btn_back_to_login
+import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.send_reset.*
+import kotlinx.android.synthetic.main.activity_sign_up.tv_username
 import com.example.handspritsarmbandapp.LoginActivity as LoginActivity1
-
+import kotlinx.android.synthetic.main.activity_sign_up.btn_back_to_login as btn_back_to_login1
 
 
 class SendResetActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class SendResetActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         //button functions that either opens a new tab or runs the change password process
-        btn_back_to_login.setOnClickListener {
+        val onClickListener = btn_back_to_login.setOnClickListener {
             startActivity(Intent(this, LoginActivity1::class.java))
             finish()
         }
