@@ -11,6 +11,8 @@
         android:theme="@style/Theme.HandspritsarmbandApp">
         <activity android:name=".SignUpActivity">
         </activity>
+        <activity android:name=".NicknameActivity">
+        </activity>
         <activity android:name=".SendResetActivity">
         </activity>
         <activity android:name=".DashboardActivity">

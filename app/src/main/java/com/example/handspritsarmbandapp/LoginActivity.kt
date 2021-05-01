@@ -92,13 +92,12 @@ class LoginActivity : AppCompatActivity() {
 
         if (currentUser != null) { //user is signed in
             if(currentUser.isEmailVerified) { //email is verified
-                if(currentUser.isAnonymous){
+                if(currentUser.displayName != null){
                     startActivity(Intent(this, DashboardActivity::class.java))
                 }
                 else{
                     startActivity(Intent(this, NicknameActivity1::class.java))
                 }
-
                 finish()
             }
         } else {
