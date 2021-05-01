@@ -4,25 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.btn_sign_up
+import com.google.firebase.auth.UserProfileChangeRequest
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.dashboard_activity.*
+import kotlinx.android.synthetic.main.nickname_activity.*
 
 
-class DashboardActivity : AppCompatActivity() {
+class StatisticsActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.dashboard_activity)
+        setContentView(R.layout.statistics_activity)
         auth = FirebaseAuth.getInstance()
-
         txt_display_name.text = auth.currentUser.displayName
-        btn_statistics.setOnClickListener {
-            startActivity(Intent(this, StatisticsActivity::class.java))
-            finish()
-        }
     }
 }

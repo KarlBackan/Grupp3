@@ -35,7 +35,6 @@ class NicknameActivity : AppCompatActivity() {
         val profileUpdates = UserProfileChangeRequest.Builder().setDisplayName(tv_display_name.text.toString()).build()
         user.updateProfile(profileUpdates)
         startActivity(Intent(this, DashboardActivity::class.java))
-
     }
 
 
