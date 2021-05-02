@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">handspritsarmbandApp</string>
+    <string name="menu">MENU</string>
+    <string name="namestring">nameString</string>
+    <string name="statistics">Statistics</string>
+    <string name="welcome">Welcome</string>
+    <string name="shop">Shop</string>
 </resources>

@@ -2,9 +2,10 @@ package com.example.handspritsarmbandapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.btn_sign_up
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -25,4 +26,5 @@ class DashboardActivity : AppCompatActivity() {
             finish()
         }
     }
-}
+
+    }

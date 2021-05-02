@@ -1,56 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
 
 
-    <LinearLayout
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="false"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:layout_marginBottom="80dp"
+            android:gravity="center"
+            android:text="Menu"
+            android:textColor="#FFFFFF"
+            android:textSize="80sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="42dp" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="80dp"
+            android:layout_height="500dp"
+            android:layout_marginBottom="80dp"
             android:gravity="center"
             android:text="Welcome"
             android:textColor="#7C4F4F"
-            android:textSize="80sp" />
+            android:textSize="70sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="42dp"/>
 
         <TextView
             android:id="@+id/txt_display_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="710dp"
             android:layout_marginBottom="80dp"
             android:gravity="center"
             android:text="nameString"
             android:textColor="#7C4F4F"
-            android:textSize="60sp" />
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="42dp"/>
 
         <Button
             android:id="@+id/btn_statistics"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="200dp"
             android:background="@drawable/button_background"
             android:gravity="center"
             android:onClick="Submit"
             android:text="Statistics"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_display_name"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btn_shop"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/button_background"
+            android:gravity="center"
+            android:onClick="Submit"
+            android:text="Shop"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_display_name"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </LinearLayout>
 
 </RelativeLayout>
