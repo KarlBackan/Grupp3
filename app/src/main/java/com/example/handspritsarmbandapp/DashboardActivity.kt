@@ -19,7 +19,10 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard_activity)
         auth = FirebaseAuth.getInstance()
-
+        while(auth.currentUser.displayName == null){
+            Thread.sleep(500);
+        }
+        
         txt_display_name.text = auth.currentUser.displayName
         btn_statistics.setOnClickListener {
             startActivity(Intent(this, StatisticsActivity::class.java))
