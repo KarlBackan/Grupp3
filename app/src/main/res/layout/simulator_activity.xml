@@ -23,21 +23,21 @@
         android:layout_marginTop="300dp"/>
 
 
-
-
     <Button
-        android:id="@+id/btn_tris"
+        android:id="@+id/btn_home"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="Submit"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="50dp"
-        android:background="@drawable/ic_tris"
+        android:background="@drawable/ic_home"
         />
     <Button
         android:id="@+id/btn_cog_wheel"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="Submit"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="340dp"
         android:layout_marginBottom="50dp"
@@ -45,45 +45,44 @@
         />
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="false"
-    android:layout_margin="0dp"
-    android:orientation="vertical">
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="70dp"
-        android:layout_height="100dp"
-        android:gravity="center"
-        android:text="Welcome"
-        android:textColor="@color/white"
-        android:textSize="70sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="68dp"
-        />
-    <TextView
-        android:id="@+id/txt_display_name"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="-20dp"
-        android:layout_marginBottom="100dp"
-        android:gravity="center"
-        android:text="name"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="68dp" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_margin="0dp"
+        android:orientation="vertical">
 
-</LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:layout_margin="20dp"
-    android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="Simulator"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="68dp"
+            />
+        <TextView
+            android:id="@+id/txt_display_name"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="100dp"
+            android:gravity="center"
+            android:text="name"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="68dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_statistics"
@@ -94,7 +93,7 @@
             android:background="@drawable/button_background"
             android:gravity="center"
             android:onClick="Submit"
-            android:text="Statistics"
+            android:text="Pump"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="50sp"
@@ -102,24 +101,15 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp" />
 
-        <Button
-            android:id="@+id/btn_simulator"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginBottom="64dp"
-            android:background="@drawable/button_background"
-            android:gravity="center"
-            android:onClick="Submit"
-            android:text="Simulator"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toBottomOf="@id/txt_display_name"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp" />
+
 
 
     </LinearLayout>
+
+
+
+
+
 
 
 </RelativeLayout>

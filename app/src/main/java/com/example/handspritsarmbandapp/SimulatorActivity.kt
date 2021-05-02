@@ -12,11 +12,11 @@ import kotlinx.android.synthetic.main.nickname_activity.*
 import kotlinx.android.synthetic.main.statistics_activity.*
 
 
-class StatisticsActivity : AppCompatActivity() {
+class SimulatorActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.statistics_activity)
+        setContentView(R.layout.simulator_activity)
         auth = FirebaseAuth.getInstance()
         txt_display_name.text = auth.currentUser.displayName
         btn_home.setOnClickListener {

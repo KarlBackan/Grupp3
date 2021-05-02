@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
             android:gravity="center"
-            android:text="Welcome"
+            android:text="Make your nickname"
             android:textColor="#7C4F4F"
             android:textSize="80sp" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:text="Username "
+            android:text="name"
             android:textColor="#7C4F4F"
             android:textSize="35dp" />
 

@@ -23,7 +23,6 @@ class NicknameActivity : AppCompatActivity() {
         btn_set_display_name.setOnClickListener {
             createDisplayName()
         }
-
     }
     private fun createDisplayName(){
         if (tv_display_name.text.toString().isEmpty()) {
@@ -36,9 +35,5 @@ class NicknameActivity : AppCompatActivity() {
         user.updateProfile(profileUpdates)
         startActivity(Intent(this, DashboardActivity::class.java))
     }
-
-
-
-
 }
 

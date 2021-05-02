@@ -28,6 +28,10 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, StatisticsActivity::class.java))
             finish()
         }
+        btn_simulator.setOnClickListener {
+            startActivity(Intent(this, SimulatorActivity::class.java))
+            finish()
+        }
     }
 
     }
