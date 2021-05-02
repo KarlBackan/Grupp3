@@ -23,5 +23,9 @@ class StatisticsActivity : AppCompatActivity() {
             startActivity(Intent(this, DashboardActivity::class.java))
             finish()
         }
+        btn_change_name3.setOnClickListener {
+            startActivity(Intent(this, NicknameActivity::class.java))
+            finish()
+        }
     }
 }

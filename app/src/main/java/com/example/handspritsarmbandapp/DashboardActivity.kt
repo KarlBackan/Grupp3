@@ -32,6 +32,14 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, SimulatorActivity::class.java))
             finish()
         }
+        btn_change_name.setOnClickListener {
+            startActivity(Intent(this, NicknameActivity::class.java))
+            finish()
+        }
+        btn_logout.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
     }
 
     }

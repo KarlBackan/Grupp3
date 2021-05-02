@@ -17,20 +17,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="60dp"
             android:gravity="center"
             android:text="Make your nickname"
             android:textColor="#7C4F4F"
             android:textSize="80sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:text="name"
-            android:textColor="#7C4F4F"
-            android:textSize="35dp" />
+
 
         <EditText
             android:id="@+id/tv_display_name"

@@ -34,7 +34,7 @@
         android:background="@drawable/ic_home"
         />
     <Button
-        android:id="@+id/btn_cog_wheel"
+        android:id="@+id/btn_change_name3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:onClick="Submit"

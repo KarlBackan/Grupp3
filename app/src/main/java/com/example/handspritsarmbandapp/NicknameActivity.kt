@@ -33,6 +33,7 @@ class NicknameActivity : AppCompatActivity() {
         val user = auth.currentUser
         val profileUpdates = UserProfileChangeRequest.Builder().setDisplayName(tv_display_name.text.toString()).build()
         user.updateProfile(profileUpdates)
+        Thread.sleep(2000);
         startActivity(Intent(this, DashboardActivity::class.java))
     }
 }

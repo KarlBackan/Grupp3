@@ -9,7 +9,9 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.dashboard_activity.*
 import kotlinx.android.synthetic.main.dashboard_activity.txt_display_name
 import kotlinx.android.synthetic.main.nickname_activity.*
+import kotlinx.android.synthetic.main.simulator_activity.*
 import kotlinx.android.synthetic.main.statistics_activity.*
+import kotlinx.android.synthetic.main.statistics_activity.btn_home
 
 
 class SimulatorActivity : AppCompatActivity() {
@@ -21,6 +23,10 @@ class SimulatorActivity : AppCompatActivity() {
         txt_display_name.text = auth.currentUser.displayName
         btn_home.setOnClickListener {
             startActivity(Intent(this, DashboardActivity::class.java))
+            finish()
+        }
+        btn_change_name2.setOnClickListener {
+            startActivity(Intent(this, NicknameActivity::class.java))
             finish()
         }
     }
